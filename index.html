@@ -9,21 +9,36 @@
     <link rel="shortcut icon" href="assets/ico/favicon.ico">
 
     <title>Signin Template for Bootstrap</title>
-
+  <script src="jquery/jquery-2.1.0.js"></script>
       <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
 
   <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.css">
   <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
-  
 
+  
+  
+  
 
   <script src="bootstrap/js/bootstrap.min.js"></script>
   <script src="bootstrap/js/bootstrap.js"></script>
 
 
-  <script src="http://code.jquery.com/jquery.js"></script>
-    <link href="css/signin.css" rel="stylesheet">
+  
+
+   <link href="css/signin.css" rel="stylesheet">
+
+
+    <script>
+  $(document).ready(function() {
+    $.ajax({
+        url: "http://rest-service.guides.spring.io/greeting"
+    }).then(function(data) {
+       $('#greeting-id').val(data.id);
+       $('#greeting-content').val("data.content");
+    });
+});
+</script>
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -41,8 +56,8 @@
 
       <form class="form-signin" role="form">
         <h2 class="form-signin-heading">Please sign in</h2>
-        <input type="email" class="form-control" placeholder="Email address" required autofocus>
-        <input type="password" class="form-control" placeholder="Password" required>
+        <input type="email" class="form-control" placeholder="Email address" id="greeting-id" required autofocus>
+        <input type="text" class="form-control" placeholder="Password" id="greeting-content" required>
         <label class="checkbox">
           <input type="checkbox" value="remember-me"> Remember me
         </label>
