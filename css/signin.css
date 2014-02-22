@@ -1,8 +1,13 @@
-body{
-  background-image: url(../assets/images/1.jpg);
+
+
+#imageDiv{
+  width: 70%;
+  left: 0;
+  background-image: url(../assets/images/2488-11.jpg);
 }
 
 #mainDiv {
-  opacity:0.8;
-  filter:alpha(opacity=80); /* For IE8 and earlier */
+  right: 0;
+  width: 30%;
+  opacity:0.4;
 }
