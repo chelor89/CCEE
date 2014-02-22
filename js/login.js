@@ -16,4 +16,7 @@ $(document).ready(function() {
 		window.location.href = "../views/main.html";
 	});
 
+	$("#imgFondo").width($(window).width());
+	$("#imgFondo").height($(window).height());
+	
 });

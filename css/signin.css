@@ -2,12 +2,20 @@
 
 #imageDiv{
   width: 70%;
-  left: 0;
+height:100%;  
   background-image: url(../assets/images/2488-11.jpg);
 }
 
 #mainDiv {
-  right: 0;
+height:100%;  
   width: 30%;
   opacity:0.4;
+}
+.relative2 {
+  position: relative;
+  top: -20px;
+  left: 20px;
+  background-color: white;
+  width: 500px;
+  background-image: url(../assets/images/2488-11.jpg);
 }
