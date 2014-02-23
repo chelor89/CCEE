@@ -1,0 +1,1381 @@
+@font-face {
+  font-family: 'museo_slab500';
+  src: url("fonts/museo_slab_500-webfont.eot");
+  src: url("fonts/museo_slab_500-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/museo_slab_500-webfont.woff") format("woff"), url("fonts/museo_slab_500-webfont.ttf") format("truetype"), url("fonts/museo_slab_500-webfont.svg#museo_slab500") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'proxima_nova_rgbold';
+  src: url("fonts/proximanova-bold-webfont.eot");
+  src: url("fonts/proximanova-bold-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/proximanova-bold-webfont.woff") format("woff"), url("fonts/proximanova-bold-webfont.ttf") format("truetype"), url("fonts/proximanova-bold-webfont.svg#proxima_nova_rgbold") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'proxima_nova_rgregular';
+  src: url("fonts/proximanova-regular-webfont.eot");
+  src: url("fonts/proximanova-regular-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/proximanova-regular-webfont.woff") format("woff"), url("fonts/proximanova-regular-webfont.ttf") format("truetype"), url("fonts/proximanova-regular-webfont.svg#proxima_nova_rgregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+.wrapper {
+  width: 1180px;
+  padding: 0 10px;
+  margin: 0px auto; }
+
+.cleaner {
+  clear: both; }
+
+.fleft {
+  float: left; }
+
+.fright {
+  float: right; }
+
+.hidden {
+  display: none; }
+
+header {
+  width: 100%;
+  height: 90px;
+  position: fixed;
+  margin-bottom: 90px;
+  z-index: 1000;
+  -webkit-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.14);
+  -moz-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.14);
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.14);
+  background-color: #FFF; }
+  header .inner_header {
+    width: 1180px;
+    padding: 0 10px;
+    margin: 0px auto; }
+  header h1 {
+    float: left;
+    margin-top: 25px;
+    display: block;
+    cursor: pointer;
+    position: relative; }
+    header h1 span {
+      display: none; }
+    header h1 .nav_icon {
+      display: none; }
+    header h1 .logo {
+      background: transparent url("../images/logo.png") no-repeat;
+      width: 176px;
+      height: 39px;
+      position: absolute;
+      display: block; }
+  header nav {
+    float: right;
+    margin-top: 25px; }
+    header nav ul {
+      float: left; }
+      header nav ul li {
+        display: inline;
+        line-height: 42px;
+        font-size: 16px;
+        color: #cacacc; }
+        header nav ul li a {
+          font-family: "proxima_nova_rgbold";
+          color: #19191a;
+          text-decoration: none;
+          padding: 0 17px; }
+        header nav ul li a.selected, header nav ul li a:hover {
+          color: #ce1d33; }
+    header nav .hire_me {
+      font-size: 16px;
+      font-family: "proxima_nova_rgbold";
+      background-color: #ce1d33;
+      float: right;
+      color: #FFF;
+      padding: 10px 26px;
+      -webkit-border-radius: 8px;
+      border-radius: 8px;
+      background-clip: padding-box;
+      cursor: pointer;
+      border: 3px solid #ce1d33;
+      margin-left: 24px;
+      -o-transition: .3s;
+      -ms-transition: .3s;
+      -moz-transition: .3s;
+      -webkit-transition: .3s;
+      display: block;
+      text-decoration: none;
+      /* ...and now for the proper property */ }
+    header nav .hire_me:hover {
+      background-color: #FFF;
+      color: #ce1d33; }
+
+#main {
+  position: relative;
+  top: 91px; }
+
+#start {
+  width: 100%;
+  background: url("../images/start_background.gif");
+  height: 510px;
+  border-bottom: 1px solid #e9e9e9; }
+  #start .left {
+    float: left;
+    width: 660px; }
+    #start .left img {
+      margin-top: 71px; }
+  #start .right {
+    float: right;
+    width: 480px;
+    padding-left: 40px;
+    padding-top: 120px; }
+    #start .right .hello {
+      font-size: 60px;
+      font-family: "proxima_nova_rgbold";
+      color: #1a1a1a; }
+    #start .right p {
+      width: 380px;
+      margin-top: 25px;
+      font-size: 28px;
+      font-family: "museo_slab500";
+      line-height: 50px;
+      color: #333333; }
+      #start .right p span {
+        color: #808080; }
+
+#services {
+  width: 100%;
+  padding-top: 90px;
+  border-bottom: 1px solid #e9e9e9; }
+  #services h2 {
+    text-align: center;
+    color: #1a1a1a;
+    font-size: 60px;
+    font-family: "proxima_nova_rgbold";
+    margin-bottom: 70px; }
+    #services h2 br {
+      display: none; }
+  #services .column {
+    width: 380px;
+    float: left;
+    margin-right: 20px; }
+    #services .column img {
+      display: block;
+      margin: 0 auto; }
+    #services .column h3 {
+      text-align: center;
+      font-size: 28px;
+      font-family: "museo_slab500";
+      color: #1a1a1a;
+      line-height: 40px;
+      margin-top: 34px; }
+    #services .column p {
+      margin-top: 18px;
+      font-size: 18px;
+      font-family: "proxima_nova_rgregular";
+      color: #666666;
+      line-height: 32px;
+      text-align: center;
+      margin-bottom: 80px; }
+  #services .column.last {
+    margin-right: 0px; }
+
+#work {
+  width: 100%;
+  padding: 90px 0;
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #e9e9e9; }
+  #work h4 {
+    text-align: center;
+    color: #1a1a1a;
+    font-size: 58px;
+    font-family: "proxima_nova_rgbold";
+    margin-bottom: 60px;
+    display: block; }
+  #work .project {
+    display: block;
+    position: relative;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    background: transparent;
+    border: 10px solid #FFF;
+    -webkit-box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    background-color: #FFF;
+    z-index: 200;
+    width: 360px;
+    height: 260px; }
+    #work .project img {
+      position: absolute;
+      z-index: 100;
+      top: 0px;
+      left: 0px;
+      display: block; }
+    #work .project .hover {
+      width: 360px;
+      height: 260px;
+      background: transparent url("../images/project_hover.png") center center no-repeat;
+      position: absolute;
+      z-index: 300;
+      top: 0px;
+      left: 0px;
+      display: none; }
+  #work .project.last {
+    margin-right: 0px; }
+  #work .project.lastrow {
+    margin-bottom: 0px; }
+
+#clients {
+  width: 100%;
+  background-color: #FFF;
+  padding: 90px 0;
+  position: relative;
+  border-bottom: 1px solid #e9e9e9; }
+  #clients .left_nav {
+    position: absolute;
+    width: 91px;
+    height: 92px;
+    background: transparent url("../images/arrow_buttons.png") top left no-repeat;
+    top: 50%;
+    margin-top: -46px;
+    left: 0px;
+    cursor: pointer;
+    text-indent: -9999px; }
+  #clients .left_nav span {
+    position: absolute;
+    width: 91px;
+    height: 92px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: transparent url("../images/arrow_buttons.png") bottom left no-repeat;
+    opacity: 0;
+    -webkit-transition: opacity 0.5s;
+    -moz-transition: opacity 0.5s;
+    -o-transition: opacity 0.5s; }
+  #clients .left_nav:hover span {
+    opacity: 1; }
+  #clients .right_nav {
+    position: absolute;
+    width: 91px;
+    height: 92px;
+    background: transparent url("../images/arrow_buttons.png") top right no-repeat;
+    top: 50%;
+    margin-top: -46px;
+    right: 0px;
+    cursor: pointer;
+    text-indent: -9999px; }
+  #clients .right_nav span {
+    position: absolute;
+    width: 91px;
+    height: 92px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: transparent url("../images/arrow_buttons.png") bottom right no-repeat;
+    opacity: 0;
+    -webkit-transition: opacity 0.5s;
+    -moz-transition: opacity 0.5s;
+    -o-transition: opacity 0.5s; }
+  #clients .right_nav:hover span {
+    opacity: 1; }
+  #clients h4 {
+    text-align: center;
+    color: #1a1a1a;
+    font-size: 60px;
+    font-family: "proxima_nova_rgbold";
+    margin-bottom: 60px;
+    display: block; }
+  #clients .client_box {
+    width: 580px; }
+    #clients .client_box .left {
+      float: left;
+      width: 232px;
+      margin-right: 20px; }
+      #clients .client_box .left .photo {
+        width: 200px;
+        margin-bottom: 30px; }
+      #clients .client_box .left .logo {
+        width: 200px;
+        text-align: center; }
+    #clients .client_box .right {
+      float: left;
+      width: 328px; }
+      #clients .client_box .right .name {
+        font-size: 36px;
+        line-height: 40px;
+        font-family: "museo_slab500";
+        color: #1a1a1b;
+        margin-top: 50px; }
+      #clients .client_box .right .position {
+        font-size: 24px;
+        line-height: 40px;
+        color: #9d9d9d;
+        font-family: "proxima_nova_rgregular";
+        margin-bottom: 40px; }
+      #clients .client_box .right .testimonial {
+        font-family: "proxima_nova_rgregular";
+        font-size: 18px;
+        line-height: 32px;
+        color: #666666;
+        margin-bottom: 60px; }
+  #clients .testimonial_nav {
+    width: 60px;
+    height: 20px;
+    margin: 0 auto; }
+    #clients .testimonial_nav .button {
+      width: 20px;
+      height: 20px;
+      background: transparent url("../images/dots.png") right no-repeat;
+      float: left;
+      margin-right: 20px;
+      cursor: pointer; }
+    #clients .testimonial_nav .button.last {
+      margin-right: 0px; }
+    #clients .testimonial_nav .button.selected, #clients .testimonial_nav .button:hover {
+      background: transparent url("../images/dots.png") left no-repeat; }
+
+#book {
+  width: 100%;
+  background-color: #f8f8f8;
+  padding: 90px 0;
+  border-bottom: 1px solid #e9e9e9; }
+  #book h4 {
+    text-align: center;
+    color: #1a1a1a;
+    font-size: 60px;
+    font-family: "proxima_nova_rgbold";
+    margin-bottom: 60px;
+    display: block; }
+  #book .left {
+    width: 545px;
+    float: left;
+    text-align: right;
+    padding-right: 35px; }
+  #book .right {
+    width: 552px;
+    float: right;
+    padding-left: 28px; }
+    #book .right .book_title {
+      font-size: 36px;
+      font-family: "museo_slab500";
+      color: #1a1a1a;
+      margin-top: 40px; }
+    #book .right .subtitle {
+      font-size: 24px;
+      font-family: "proxima_nova_rgregular";
+      color: #9d9d9d;
+      margin-top: 22px; }
+    #book .right p {
+      margin-top: 35px;
+      width: 430px;
+      font-size: 18px;
+      font-family: "proxima_nova_rgregular";
+      color: #666666;
+      line-height: 32px; }
+    #book .right .kindle {
+      width: 256px;
+      height: 92px;
+      display: block;
+      background: transparent url("../images/kindle_btn.png") top no-repeat;
+      margin-top: 35px;
+      position: relative; }
+    #book .right .kindle span {
+      position: absolute;
+      width: 256px;
+      height: 92px;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background: transparent url("../images/kindle_btn.png") bottom no-repeat;
+      opacity: 0;
+      -webkit-transition: opacity 0.5s;
+      -moz-transition: opacity 0.5s;
+      -o-transition: opacity 0.5s; }
+    #book .right .kindle:hover span {
+      opacity: 1; }
+
+#contact {
+  background-color: #FFF;
+  padding: 90px 0 80px 0; }
+  #contact h4 {
+    text-align: center;
+    color: #1a1a1a;
+    font-size: 60px;
+    font-family: "proxima_nova_rgbold";
+    margin-bottom: 60px;
+    display: block; }
+  #contact .alert {
+    padding: 0px 130px;
+    margin-top: -30px;
+    margin-bottom: 30px; }
+    #contact .alert .container {
+      width: 100%;
+      color: #c57400;
+      font-size: 22px;
+      font-family: "proxima_nova_rgbold";
+      background-color: #fff4e7;
+      padding: 20px 0;
+      text-align: center; }
+    #contact .alert .container.success {
+      background-color: #eafcef;
+      color: #00a40c;
+      padding: 13px 0; }
+      #contact .alert .container.success .inner {
+        padding: 7px 0;
+        background: transparent url("../images/success.png") left center no-repeat;
+        width: 786px;
+        margin: 0px auto;
+        padding-left: 54px; }
+        #contact .alert .container.success .inner br {
+          display: none; }
+  #contact .more_info {
+    float: left;
+    width: 722px;
+    height: 186px;
+    border: 1px solid #d9d9d9;
+    background-color: #FFF;
+    padding: 24px 28px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    background-clip: padding-box;
+    resize: none;
+    font-family: "museo_slab500";
+    font-size: 20px;
+    color: #989898;
+    -o-transition: .3s;
+    -ms-transition: .3s;
+    -moz-transition: .3s;
+    -webkit-transition: .3s;
+    outline: none; }
+  #contact .more_info:hover {
+    border: 1px solid #ce1d33; }
+  #contact .right_form {
+    float: right;
+    width: 380px; }
+    #contact .right_form .input {
+      border: 1px solid #d9d9d9;
+      -webkit-border-radius: 8px;
+      border-radius: 8px;
+      background-clip: padding-box;
+      height: 57px;
+      width: 330px;
+      padding: 0 24px;
+      font-family: "museo_slab500";
+      font-size: 20px;
+      color: #989898;
+      margin-bottom: 26px;
+      -o-transition: .3s;
+      -ms-transition: .3s;
+      -moz-transition: .3s;
+      -webkit-transition: .3s;
+      outline: none; }
+    #contact .right_form .input:hover, #contact .right_form input:focus {
+      border: 1px solid #ce1d33; }
+    #contact .right_form .submit_btn {
+      width: 374px;
+      -webkit-border-radius: 8px;
+      border-radius: 8px;
+      background-clip: padding-box;
+      border: 3px solid #ce1d33;
+      background-color: #ce1d33;
+      color: #FFF;
+      font-family: "proxima_nova_rgbold";
+      font-size: 22px;
+      text-align: center;
+      line-height: 54px;
+      cursor: pointer;
+      -o-transition: .3s;
+      -ms-transition: .3s;
+      -moz-transition: .3s;
+      -webkit-transition: .3s;
+      -webkit-appearance: none;
+      /* ...and now for the proper property */ }
+    #contact .right_form .submit_btn:hover {
+      background-color: #FFF;
+      color: #ce1d33; }
+  #contact .contact_info {
+    margin-top: 68px; }
+    #contact .contact_info .column {
+      float: left;
+      width: 380px;
+      margin-right: 20px;
+      text-align: center; }
+    #contact .contact_info .column.last {
+      margin-right: 0px; }
+    #contact .contact_info .column.mail img {
+      display: block;
+      margin: 0px auto; }
+    #contact .contact_info .column.mail a {
+      margin-top: 25px;
+      display: block;
+      font-family: "proxima_nova_rgbold";
+      font-size: 24px;
+      color: #b2b2b2;
+      text-decoration: none; }
+    #contact .contact_info .column.phone img {
+      display: block;
+      margin: 0px auto; }
+    #contact .contact_info .column.phone span, #contact .contact_info .column.phone a {
+      margin-top: 25px;
+      display: block;
+      font-family: "proxima_nova_rgbold";
+      font-size: 24px;
+      color: #b2b2b2;
+      text-decoration: none; }
+    #contact .contact_info .column.phone a {
+      display: inline; }
+    #contact .contact_info .column.social span {
+      display: block;
+      font-size: 24px;
+      font-family: "proxima_nova_rgbold";
+      color: #333333;
+      margin-bottom: 25px; }
+    #contact .contact_info .column.social a {
+      width: 64px;
+      height: 64px;
+      display: inline-block;
+      margin-right: 10px;
+      position: relative;
+      text-indent: -9999px; }
+    #contact .contact_info .column.social a.last {
+      margin-right: 0px; }
+    #contact .contact_info .column.social a span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      opacity: 0;
+      -webkit-transition: opacity 0.5s;
+      -moz-transition: opacity 0.5s;
+      -o-transition: opacity 0.5s;
+      width: 64px;
+      height: 64px; }
+    #contact .contact_info .column.social a:hover span {
+      opacity: 1; }
+    #contact .contact_info .column.social a.twiiter {
+      background: url("../images/social_icons.png") no-repeat 0 0; }
+    #contact .contact_info .column.social a.twiiter span {
+      background: url("../images/social_icons.png") no-repeat 0 -69px; }
+    #contact .contact_info .column.social a.dribble {
+      background: url("../images/social_icons.png") no-repeat -74px 0; }
+    #contact .contact_info .column.social a.dribble span {
+      background: url("../images/social_icons.png") no-repeat -74px -69px; }
+    #contact .contact_info .column.social a.behance {
+      background: url("../images/social_icons.png") no-repeat -148px 0; }
+    #contact .contact_info .column.social a.behance span {
+      background: url("../images/social_icons.png") no-repeat -148px -69px; }
+    #contact .contact_info .column.social a.linkedin {
+      background: url("../images/social_icons.png") no-repeat -222px 0; }
+    #contact .contact_info .column.social a.linkedin span {
+      background: url("../images/social_icons.png") no-repeat -222px -69px; }
+
+#portfolio {
+  background-color: #FFF;
+  padding-top: 90px; }
+  #portfolio .logo {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 90px; }
+    #portfolio .logo img {
+      max-width: 100%; }
+  #portfolio .text {
+    text-align: center;
+    font-family: "museo_slab500";
+    font-size: 24px;
+    color: #333333;
+    line-height: 44px;
+    padding: 0 50px;
+    margin-bottom: 90px; }
+    #portfolio .text a {
+      color: #333333;
+      text-decoration: none; }
+    #portfolio .text a:hover {
+      color: #ce1d33; }
+  #portfolio .image {
+    text-align: center; }
+    #portfolio .image img {
+      max-width: 100%;
+      margin-bottom: 90px; }
+    #portfolio .image img.last {
+      margin-bottom: 0px; }
+  #portfolio .left_nav {
+    position: absolute;
+    width: 91px;
+    height: 92px;
+    background: transparent url("../images/arrow_buttons.png") top left no-repeat;
+    top: 330px;
+    left: 0px;
+    cursor: pointer;
+    text-indent: -9999px; }
+  #portfolio .left_nav span {
+    position: absolute;
+    width: 91px;
+    height: 92px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: transparent url("../images/arrow_buttons.png") bottom left no-repeat;
+    opacity: 0;
+    -webkit-transition: opacity 0.5s;
+    -moz-transition: opacity 0.5s;
+    -o-transition: opacity 0.5s; }
+  #portfolio .left_nav:hover span {
+    opacity: 1; }
+  #portfolio .right_nav {
+    position: absolute;
+    width: 91px;
+    height: 92px;
+    background: transparent url("../images/arrow_buttons.png") top right no-repeat;
+    top: 330px;
+    right: 0px;
+    cursor: pointer;
+    text-indent: -9999px; }
+  #portfolio .right_nav span {
+    position: absolute;
+    width: 91px;
+    height: 92px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: transparent url("../images/arrow_buttons.png") bottom right no-repeat;
+    opacity: 0;
+    -webkit-transition: opacity 0.5s;
+    -moz-transition: opacity 0.5s;
+    -o-transition: opacity 0.5s; }
+  #portfolio .right_nav:hover span {
+    opacity: 1; }
+
+@media (max-width: 1382px) and (min-width: 1200px) {
+  #clients .left_nav {
+    display: none; }
+  #clients .right_nav {
+    display: none; } }
+@media (max-width: 1199px) {
+  .wrapper {
+    width: 940px;
+    padding: 0 10px;
+    margin: 0px auto; }
+
+  header .inner_header {
+    width: 940px;
+    padding: 0 10px;
+    margin: 0px auto; }
+
+  #portfolio .text {
+    padding: 0 0; }
+
+  #start .left {
+    width: 620px; }
+    #start .left img {
+      margin-top: 71px; }
+  #start .right {
+    float: right;
+    width: 275px;
+    padding-left: 25px;
+    padding-top: 120px; }
+    #start .right p {
+      width: 275px;
+      margin-top: 25px;
+      font-size: 24px;
+      font-family: "museo_slab500";
+      line-height: 40px;
+      color: #333333; }
+      #start .right p span {
+        color: #808080; }
+
+  #services .column {
+    width: 300px;
+    float: left;
+    margin-right: 20px; }
+    #services .column img {
+      display: block;
+      margin: 0 auto; }
+    #services .column h3 {
+      text-align: center;
+      font-size: 28px;
+      font-family: "museo_slab500";
+      color: #1a1a1a;
+      line-height: 40px;
+      margin-top: 34px; }
+    #services .column p {
+      margin-top: 18px;
+      font-size: 18px;
+      font-family: "proxima_nova_rgregular";
+      color: #666666;
+      line-height: 32px;
+      text-align: center;
+      margin-bottom: 45px; }
+  #services .column.last {
+    margin-right: 0px; }
+
+  #work .project {
+    width: 280px;
+    height: 202px; }
+    #work .project img {
+      width: 280px;
+      height: 202px; }
+    #work .project .hover {
+      width: 280px;
+      height: 202px; }
+
+  #clients .client_box {
+    width: 470px; }
+    #clients .client_box .left {
+      float: left;
+      width: 188px;
+      margin-right: 0px; }
+      #clients .client_box .left .photo {
+        width: 158px; }
+        #clients .client_box .left .photo img {
+          max-width: 158px; }
+      #clients .client_box .left .logo {
+        width: 158px; }
+        #clients .client_box .left .logo img {
+          max-width: 158px; }
+    #clients .client_box .right {
+      float: left;
+      width: 282px; }
+
+  #book .left {
+    width: 424px; }
+  #book .right {
+    width: 433px; }
+
+  #contact .alert {
+    padding: 0px; }
+  #contact .more_info {
+    width: 484px; }
+  #contact .contact_info .column {
+    float: left;
+    width: 300px;
+    margin-right: 20px;
+    text-align: center; }
+  #contact .contact_info .column.mail a {
+    font-size: 22px; }
+  #contact .contact_info .column.phone span {
+    font-size: 22px; } }
+@media (max-width: 1142px) and (min-width: 960px) {
+  #clients .left_nav {
+    display: none; }
+  #clients .right_nav {
+    display: none; } }
+@media (max-width: 959px) {
+  .wrapper {
+    width: 748px; }
+
+  header {
+    width: 100%;
+    min-height: 90px;
+    position: fixed;
+    margin-bottom: 90px;
+    z-index: 1000;
+    -webkit-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.14);
+    -moz-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.14);
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.14);
+    background-color: #FFF; }
+    header .inner_header {
+      width: 100%;
+      margin: 0px;
+      padding: 0px; }
+    header h1 {
+      float: none;
+      margin: 0px auto;
+      width: 748px;
+      height: 90px;
+      position: relative;
+      display: block;
+      cursor: pointer; }
+      header h1 .logo {
+        top: 25px; }
+      header h1 span {
+        display: none; }
+      header h1 .nav_icon {
+        display: block;
+        width: 40px;
+        height: 21px;
+        float: right;
+        background: transparent url("../images/nav_icon.png") top no-repeat;
+        margin-top: 34px;
+        position: relative; }
+      header h1 .nav_icon span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        opacity: 0;
+        -webkit-transition: opacity 0.5s;
+        -moz-transition: opacity 0.5s;
+        -o-transition: opacity 0.5s;
+        display: block;
+        width: 40px;
+        height: 21px;
+        float: right;
+        background: transparent url("../images/nav_icon.png") bottom no-repeat; }
+      header h1 .nav_icon:hover span {
+        opacity: 1; }
+      header h1 .nav_icon.selected {
+        background: transparent url("../images/nav_icon.png") bottom no-repeat; }
+    header nav {
+      clear: both;
+      width: 100%;
+      margin-top: 0px;
+      display: none; }
+      header nav ul {
+        display: block;
+        width: 100%; }
+        header nav ul li {
+          display: block;
+          font-size: 16px;
+          border-bottom: 1px solid #676970;
+          background-color: #3a3a3a;
+          line-height: 49px; }
+          header nav ul li a {
+            margin: 0px auto;
+            display: block;
+            line-height: 49px;
+            font-family: "proxima_nova_rgbold";
+            color: #FFF;
+            text-decoration: none;
+            padding: 0 17px;
+            background-color: #3a3a3a; }
+          header nav ul li a.selected, header nav ul li a:hover {
+            background-color: #1d1d1d;
+            color: #FFF; }
+        header nav ul li.separator {
+          display: none; }
+      header nav .hire_me {
+        display: none; }
+
+  #portfolio .text {
+    font-size: 20px;
+    line-height: 36px; }
+  #portfolio .left_nav {
+    width: 73px;
+    height: 74px;
+    background-size: 157px;
+    top: 385px; }
+  #portfolio .left_nav span {
+    width: 73px;
+    height: 74px;
+    background-size: 157px; }
+  #portfolio .right_nav {
+    width: 73px;
+    height: 74px;
+    background-size: 157px;
+    top: 385px; }
+  #portfolio .right_nav span {
+    width: 73px;
+    height: 74px;
+    background-size: 157px; }
+
+  #start {
+    width: 100%;
+    background: url("../images/start_background_big.gif");
+    border-bottom: 1px solid #e9e9e9;
+    padding-top: 90px;
+    height: auto;
+    padding-bottom: 60px; }
+    #start .left {
+      width: 100%;
+      text-align: center; }
+      #start .left img {
+        margin-top: 50px;
+        width: 635px; }
+    #start .right {
+      width: 100%;
+      padding: 0; }
+      #start .right .hello {
+        font-size: 50px;
+        font-family: "proxima_nova_rgbold";
+        color: #1a1a1a;
+        text-align: center; }
+      #start .right p {
+        width: 100%;
+        text-align: center;
+        margin-top: 25px;
+        font-size: 24px;
+        font-family: "museo_slab500" !important;
+        line-height: 40px;
+        color: #333333; }
+        #start .right p span {
+          color: #808080; }
+
+  #services h2 {
+    text-align: center;
+    color: #1a1a1a;
+    font-size: 50px;
+    font-family: "proxima_nova_rgbold";
+    margin-bottom: 70px; }
+  #services .column {
+    width: 236px; }
+    #services .column img {
+      width: 160px; }
+
+  #work h4 {
+    font-size: 50px;
+    margin-bottom: 40px; }
+  #work .project {
+    border: 5px solid #FFF;
+    -webkit-box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    background-color: #FFF;
+    z-index: 200;
+    width: 226px;
+    height: 164px; }
+    #work .project img {
+      position: absolute;
+      z-index: 100;
+      top: 0px;
+      left: 0px;
+      display: block;
+      width: 226px;
+      height: 164px; }
+    #work .project .hover {
+      width: 226px;
+      height: 164px;
+      background: transparent url("../images/project_hover.png") center center no-repeat;
+      position: absolute;
+      z-index: 300;
+      top: 0px;
+      left: 0px;
+      display: none; }
+  #work .project.last {
+    margin-right: 0px; }
+  #work .project.lastrow {
+    margin-bottom: 0px; }
+
+  #clients {
+    width: 100%;
+    background-color: #FFF;
+    padding: 90px 0;
+    position: relative;
+    border-bottom: 1px solid #e9e9e9; }
+    #clients .left_nav {
+      display: none; }
+    #clients .right_nav {
+      display: none; }
+    #clients h4 {
+      font-size: 50px; }
+    #clients .client_box {
+      width: 364px;
+      margin-right: 20px; }
+      #clients .client_box .left {
+        text-align: center; }
+        #clients .client_box .left .photo {
+          width: 364px;
+          margin-bottom: 30px; }
+          #clients .client_box .left .photo img {
+            width: 200px; }
+        #clients .client_box .left .logo {
+          width: 364px;
+          text-align: center; }
+      #clients .client_box .right {
+        width: 364px; }
+        #clients .client_box .right .name {
+          font-size: 32px;
+          line-height: 40px;
+          font-family: "museo_slab500";
+          color: #1a1a1b;
+          margin-top: 50px;
+          text-align: center; }
+        #clients .client_box .right .position {
+          font-size: 24px;
+          line-height: 40px;
+          color: #9d9d9d;
+          font-family: "proxima_nova_rgregular";
+          margin-bottom: 40px;
+          text-align: center; }
+        #clients .client_box .right .testimonial {
+          font-family: "proxima_nova_rgregular";
+          font-size: 18px;
+          line-height: 32px;
+          color: #666666;
+          margin-bottom: 60px;
+          text-align: center; }
+    #clients .client_box.last {
+      margin-right: 0px; }
+    #clients .testimonial_nav {
+      width: 60px;
+      height: 20px;
+      margin: 0 auto; }
+      #clients .testimonial_nav .button {
+        width: 20px;
+        height: 20px;
+        background: transparent url("../images/dots.png") right no-repeat;
+        float: left;
+        margin-right: 20px;
+        cursor: pointer; }
+      #clients .testimonial_nav .button.last {
+        margin-right: 0px; }
+      #clients .testimonial_nav .button.selected, #clients .testimonial_nav .button:hover {
+        background: transparent url("../images/dots.png") left no-repeat; }
+
+  #book h4 {
+    font-size: 50px; }
+  #book .left {
+    width: 364px;
+    float: left;
+    text-align: center;
+    margin-right: 20px;
+    padding-right: 0px; }
+    #book .left img {
+      width: 308px; }
+  #book .right {
+    width: 364px;
+    float: right;
+    padding-left: 0px; }
+    #book .right p {
+      width: 364px; }
+
+  #contact h4 {
+    font-size: 50px; }
+  #contact .alert .container.success {
+    background-color: #eafcef;
+    color: #00a40c;
+    padding: 13px 0; }
+    #contact .alert .container.success .inner {
+      padding: 7px 0;
+      background: transparent url("../images/success.png") left center no-repeat;
+      width: 630px;
+      margin: 0px auto;
+      padding-left: 44px; }
+      #contact .alert .container.success .inner br {
+        display: inline; }
+  #contact .more_info {
+    width: 308px; }
+  #contact .right_form {
+    float: right;
+    width: 364px; }
+    #contact .right_form .input {
+      width: 314px; }
+    #contact .right_form .submit_btn {
+      width: 364px; }
+    #contact .right_form .submit_btn:hover {
+      background-color: #FFF;
+      color: #ce1d33; }
+  #contact .contact_info {
+    margin-top: 68px;
+    display: table;
+    width: 100%; }
+    #contact .contact_info .column {
+      width: 100%;
+      text-align: center;
+      float: none; }
+    #contact .contact_info .column.mail {
+      margin-top: 30px; }
+      #contact .contact_info .column.mail img {
+        display: block;
+        margin: 0px auto; }
+      #contact .contact_info .column.mail a {
+        margin-top: 25px;
+        display: block;
+        font-family: "proxima_nova_rgbold";
+        font-size: 22px;
+        color: #b2b2b2;
+        text-decoration: none; }
+    #contact .contact_info .column.phone {
+      margin-top: 30px; }
+      #contact .contact_info .column.phone img {
+        display: block;
+        margin: 0px auto; }
+      #contact .contact_info .column.phone span, #contact .contact_info .column.phone a {
+        display: block;
+        font-family: "proxima_nova_rgbold";
+        font-size: 22px;
+        color: #b2b2b2;
+        text-decoration: none; }
+      #contact .contact_info .column.phone a {
+        display: inline; }
+    #contact .contact_info .column.social {
+      display: table-header-group;
+      float: none; }
+      #contact .contact_info .column.social span {
+        display: block;
+        font-size: 24px;
+        font-family: "proxima_nova_rgbold";
+        color: #333333;
+        margin-bottom: 25px;
+        text-align: center; }
+      #contact .contact_info .column.social a {
+        width: 64px;
+        height: 64px;
+        display: inline-block;
+        margin-right: 10px;
+        position: relative;
+        text-indent: -9999px; }
+      #contact .contact_info .column.social a.last {
+        margin-right: 0px; }
+      #contact .contact_info .column.social a span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        opacity: 0;
+        -webkit-transition: opacity 0.5s;
+        -moz-transition: opacity 0.5s;
+        -o-transition: opacity 0.5s;
+        width: 64px;
+        height: 64px; }
+      #contact .contact_info .column.social a:hover span {
+        opacity: 1; }
+      #contact .contact_info .column.social a.twiiter {
+        background: url("../images/social_icons.png") no-repeat 0 0; }
+      #contact .contact_info .column.social a.twiiter span {
+        background: url("../images/social_icons.png") no-repeat 0 -69px; }
+      #contact .contact_info .column.social a.dribble {
+        background: url("../images/social_icons.png") no-repeat -74px 0; }
+      #contact .contact_info .column.social a.dribble span {
+        background: url("../images/social_icons.png") no-repeat -74px -69px; }
+      #contact .contact_info .column.social a.behance {
+        background: url("../images/social_icons.png") no-repeat -148px 0; }
+      #contact .contact_info .column.social a.behance span {
+        background: url("../images/social_icons.png") no-repeat -148px -69px; }
+      #contact .contact_info .column.social a.linkedin {
+        background: url("../images/social_icons.png") no-repeat -222px 0; }
+      #contact .contact_info .column.social a.linkedin span {
+        background: url("../images/social_icons.png") no-repeat -222px -69px; } }
+@media (max-width: 767px) {
+  .wrapper {
+    width: 580px; }
+
+  header h1 {
+    width: 580px; }
+
+  #portfolio {
+    background-color: #FFF;
+    padding-top: 70px; }
+    #portfolio .logo {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 70px; }
+    #portfolio .text {
+      font-size: 18px;
+      line-height: 36px;
+      margin-bottom: 70px; }
+    #portfolio .image img {
+      margin-bottom: 70px; }
+
+  #start .left img {
+    width: 580px; }
+
+  #services .column {
+    width: 100%; }
+    #services .column img {
+      width: 128px; }
+    #services .column h3 br {
+      display: none; }
+
+  #work {
+    padding: 90px 0 70px 0; }
+    #work .project {
+      width: 370px;
+      height: 270px;
+      float: none;
+      margin: 0px auto 20px auto; }
+      #work .project img {
+        width: 370px;
+        height: 270px; }
+      #work .project .hover {
+        width: 370px;
+        height: 270px; }
+    #work .project.last {
+      margin: 0px auto 20px auto; }
+    #work .project.lastrow {
+      margin-bottom: 20px; }
+
+  #clients .client_box {
+    width: 100%;
+    margin-right: 0px; }
+    #clients .client_box .left {
+      float: none;
+      text-align: center;
+      width: 100%; }
+      #clients .client_box .left .photo {
+        width: 100%;
+        margin-bottom: 30px; }
+        #clients .client_box .left .photo img {
+          width: 200px; }
+      #clients .client_box .left .logo {
+        width: 100%;
+        text-align: center; }
+    #clients .client_box .right {
+      width: 100%;
+      float: none; }
+      #clients .client_box .right .testimonial br {
+        display: none; }
+  #clients .client_box.last {
+    margin-right: 0px; }
+
+  #book h4 {
+    font-size: 50px; }
+  #book .left {
+    width: 100%;
+    float: none;
+    text-align: center;
+    margin-right: 0px;
+    padding-right: 0px; }
+    #book .left img {
+      width: 308px; }
+  #book .right {
+    width: 100%;
+    float: none;
+    padding-left: 0px;
+    text-align: center; }
+    #book .right p {
+      width: 100%; }
+    #book .right .kindle {
+      margin: 35px auto 0px auto;
+      display: block; }
+
+  #contact h4 {
+    font-size: 50px; }
+  #contact .alert .container {
+    font-size: 18px; }
+  #contact .alert .container.success .inner {
+    width: 430px; }
+  #contact textarea {
+    text-align: center; }
+  #contact .more_info {
+    width: 524px;
+    height: 119px;
+    margin-bottom: 26px; }
+  #contact .right_form {
+    float: none;
+    width: 100%;
+    margin-left: 0px; }
+    #contact .right_form .input {
+      width: 532px; }
+    #contact .right_form input {
+      text-align: center; }
+    #contact .right_form .submit_btn {
+      width: 100%; }
+    #contact .right_form .submit_btn:hover {
+      background-color: #FFF;
+      color: #ce1d33; } }
+@media (max-width: 599px) {
+  .wrapper {
+    width: 460px; }
+
+  header {
+    position: absolute; }
+    header h1 {
+      width: 460px; }
+
+  #portfolio {
+    background-color: #FFF;
+    padding-top: 50px; }
+    #portfolio .logo {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 50px; }
+    #portfolio .text {
+      font-size: 16px;
+      line-height: 30px;
+      margin-bottom: 50px; }
+    #portfolio .image img {
+      margin-bottom: 50px; }
+    #portfolio .left_nav {
+      width: 73px;
+      height: 74px;
+      background-size: 157px;
+      top: auto;
+      bottom: 444px; }
+    #portfolio .left_nav span {
+      width: 73px;
+      height: 74px;
+      background-size: 157px; }
+    #portfolio .right_nav {
+      width: 73px;
+      height: 74px;
+      background-size: 157px;
+      top: auto;
+      bottom: 444px; }
+    #portfolio .right_nav span {
+      width: 73px;
+      height: 74px;
+      background-size: 157px; }
+
+  #start {
+    padding-bottom: 90px; }
+    #start .left {
+      display: none; }
+
+  #services h2 {
+    line-height: 60px; }
+    #services h2 br {
+      display: inline; }
+
+  #clients h4 {
+    margin-bottom: 10px; }
+  #clients .client_box .left {
+    display: none; }
+
+  #book .left {
+    display: none; }
+
+  #contact h4 {
+    font-size: 40px; }
+  #contact .alert .container {
+    font-size: 18px; }
+    #contact .alert .container .inner {
+      padding: 0 10px;
+      line-height: 1.2; }
+  #contact .alert .container.success .inner {
+    width: 380px; }
+  #contact .more_info {
+    width: 404px;
+    height: 119px;
+    margin-bottom: 26px; }
+  #contact .right_form .input {
+    width: 412px; } }
+@media (max-width: 479px) {
+  .wrapper {
+    width: 300px; }
+
+  header {
+    position: fixed; }
+    header h1 {
+      width: 300px; }
+
+  #start .left {
+    display: none; }
+
+  #work {
+    padding: 90px 0 70px 0; }
+    #work .project {
+      width: 290px;
+      height: 211px;
+      float: none;
+      margin: 0px auto 20px auto; }
+      #work .project img {
+        width: 290px;
+        height: 211px; }
+      #work .project .hover {
+        width: 290px;
+        height: 211px; }
+    #work .project.last {
+      margin: 0px auto 20px auto; }
+    #work .project.lastrow {
+      margin-bottom: 20px; }
+
+  #contact h4 {
+    font-size: 50px; }
+  #contact .alert .container.success .inner {
+    width: 220px; }
+  #contact .more_info {
+    width: 244px;
+    height: 119px;
+    margin-bottom: 26px; }
+  #contact .right_form .input {
+    width: 252px; } }

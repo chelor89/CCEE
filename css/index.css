@@ -17,3 +17,145 @@
   opacity: 0.8;
   display: none;
 }
+
+header {
+  width: 100%;
+  height: 90px;
+  position: fixed;
+  margin-bottom: 90px;
+  z-index: 1000;
+  -webkit-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.14);
+  -moz-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.14);
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.14);
+  background-color: #FFF; 
+}
+
+header .inner_header {
+  width: 1180px;
+  padding: 0 10px;
+  margin: 0px auto; 
+}
+
+header h1 {
+  float: left;
+  margin-top: 25px;
+  display: block;
+  cursor: pointer;
+  position: relative; 
+}
+
+header h1 .logo {
+  background: transparent url("../images/logo.png") no-repeat;
+  width: 176px;
+  height: 39px;
+  position: absolute;
+  display: block; 
+}
+
+header nav {
+  float: right;
+  margin-top: 25px; 
+}
+
+header nav ul {
+  float: left; 
+}
+
+header nav ul li {
+  display: inline;
+  line-height: 42px;
+  font-size: 16px;
+  color: #cacacc; 
+}
+
+header nav ul li a {
+  font-family: "proxima_nova_rgbold";
+  color: #19191a;
+  text-decoration: none;
+  padding: 0 17px; 
+}
+
+header nav ul li a.selected, header nav ul li a:hover {
+  color: #ce1d33; 
+}
+
+header nav .hire_me {
+  font-size: 16px;
+  font-family: "proxima_nova_rgbold";
+  background-color: #ce1d33;
+  float: right;
+  color: #FFF;
+  padding: 10px 26px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  background-clip: padding-box;
+  cursor: pointer;
+  border: 3px solid #ce1d33;
+  margin-left: 24px;
+  -o-transition: .3s;
+  -ms-transition: .3s;
+  -moz-transition: .3s;
+  -webkit-transition: .3s;
+  display: block;
+  text-decoration: none;
+}
+
+header nav .hire_me:hover {
+  background-color: #FFF;
+  color: #ce1d33; 
+}
+
+.wrapper {
+  width: 1180px;
+  padding: 0 10px;
+  margin: 0px auto; 
+}
+
+#container {
+  position: relative;
+  top: 91px; }
+
+#section {
+  width: 100%;
+  background: url("../images/start_background.gif");
+  height: 600px;
+  border-bottom: 1px solid #e9e9e9; 
+}
+
+#section .left {
+  float: left;
+  width: 660px; 
+}
+
+#section .left img {
+  margin-top: 71px; 
+}
+
+#section .right {
+  float: right;
+  width: 480px;
+  padding-left: 40px;
+  padding-top: 120px; 
+}
+
+#section .right .hello {
+  font-size: 60px;
+  font-family: "proxima_nova_rgbold";
+  color: #1a1a1a; 
+}
+
+#section .right p {
+  width: 380px;
+  margin-top: 25px;
+  font-size: 28px;
+  font-family: "museo_slab500";
+  line-height: 50px;
+  color: #333333; 
+}
+
+#section .right p span {
+  color: #808080; 
+}
+
+
+

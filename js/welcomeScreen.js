@@ -16,7 +16,7 @@ function welcomeScreen() {
 		var modalDiv = $('<div id="modalDiv" class="modal-content">');
 			modalDiv.appendTo(mainDiv);
 
-			modalDiv.append('<br>');
+		modalDiv.append('<br>');
 
 		var div = $('<div class="bs-example bs-example-tabs">');
 			div.appendTo(modalDiv);
@@ -97,7 +97,7 @@ function welcomeScreen() {
 		divClassControl.append($('<input id="password" name="Password" class="form-control" type="text" placeholder="********" class="input-large" required="">'));
 
 		divSignUp.append('<br>');
-		
+
 		div = $('<div class="control-group">');
 		div.appendTo(divSignUp);
 		div.append($('<label class="control-label" for="confirmsignup"></label>'));

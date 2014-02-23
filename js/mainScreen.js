@@ -8,56 +8,35 @@ mainScreen = function(welcomeScreen){
 		var mainDiv = $('<div id="mainDivMainPage">');
 		mainDiv.appendTo(document.body);
 
-		var navBar = $('<nav class="navbar navbar-default" role="navigation">');
-			navBar.appendTo(mainDiv);
+		var header = $('<header></header>')
+			header.appendTo(mainDiv);
 
-		var containerDiv = $('<div class="container-fluid">');
-			containerDiv.appendTo(navBar);
+		var divNav = $('<div class="inner_header">');
+			divNav.appendTo(header);
 
-		var div = $('<div class="navbar-header">');
-			div.appendTo(containerDiv);
+		divNav.append('<h1><div class="logo" onclick="itemClicked();"></div></h1>');
 
-		div.append('<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"></button>');
-		div.append('<a class="navbar-brand" href="#">Cada vez falta menos !</a>');
+		var nav = $('<nav></nav>');
+		divNav.append(nav);
 
-		div = $('<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">');
-		div.appendTo(containerDiv);
+		var mainUl = $('<ul></ul>');
+			mainUl.appendTo(nav);
 
-		var mainUl = $('<ul class="nav navbar-nav navbar-right">');
-			mainUl.appendTo(div);
+		mainUl.append('<li><a href="#" class="selected" id="start_nav">Inicio</a></li>');
+		mainUl.append('<li class="separator">/</li>');
+		mainUl.append('<li><a href="#" id="numbers_nav">Mis numeros</a></li>');
+		mainUl.append('<li class="separator">/</li>');
+		mainUl.append('<li><a href="#" id="booking_nav">Reservas</a></li>');
+		mainUl.append('<li class="separator">/</li>');
+		mainUl.append('<li><a href="#" id="sales_nav">Ventas</a></li>');
+		mainUl.append('<li class="separator">/</li>');
+		mainUl.append('<li><a href="#" id="statistics_nav">Estadisticas</a></li>');
+		mainUl.append('<li class="separator">/</li>');
+		mainUl.append('<li><a href="#" id="notifications_nav">Notificaciones</a></li>');
+		mainUl.append('<li class="separator">/</li>');
 
-		mainUl.append('<li><a href="#">Mis numeros</a></li>');
+		li = $('<li class="dropdown"></li>');
 
-		var li = $('<li class="dropdown">');
-			li.appendTo(mainUl);
-
-		li.append('<a href="#" class="dropdown-toggle" data-toggle="dropdown">Reservas </a>');
-
-		var secondUl = $('<ul class="dropdown-menu">');
-			secondUl.appendTo(li);
-
-		secondUl.append('<li><a href="#" >Registrar reserva</a></li>');
-		secondUl.append('<li><a href="#" >Cancelar reserva</a></li>');
-		secondUl.append('<li 	class="divider"></li>');
-		secondUl.append('<li><a href="#" >Consultas</a></li>');
-
-		li = $('<li class="dropdown">');
-		li.appendTo(mainUl);
-
-		li.append('<a href="#" class="dropdown-toggle" data-toggle="dropdown">Ventas </a>');
-
-		secondUl = $('<ul class="dropdown-menu">');
-		secondUl.appendTo(li);
-
-		secondUl.append('<li><a href="#" >Registrar venta</a></li>');
-		secondUl.append('<li><a href="#" >Cancelar venta</a></li>');
-		secondUl.append('<li 	class="divider"></li>');
-		secondUl.append('<li><a href="#" >Consultas</a></li>');
-
-		mainUl.append('<li><a href="#">Estadisticas</a></li>');
-		mainUl.append('<li><a href="#">Notificaciones</a></li>');
-
-		li = $('<li class="dropdown">');
 		li.appendTo(mainUl);
 
 		li.append('<a href="#" class="dropdown-toggle" data-toggle="dropdown">Agustin </a>');
@@ -69,6 +48,26 @@ mainScreen = function(welcomeScreen){
 		secondUl.append('<li><a href="#">Mi Grupo de Viaje (?)</a></li>');
 		secondUl.append('<li 	class="divider"></li>');
 		secondUl.append('<li><a href="#" onclick="itemClicked();">Cerrar Sesion</a></li>');
+
+		var containerDiv = $('<div id="container">');
+			containerDiv.appendTo(mainDiv);
+
+		var section = $('<section id="section">');
+			section.appendTo(containerDiv);
+
+		var wrapper = $('<div class="wrapper">');
+			wrapper.appendTo('section');
+
+		var rightDiv = $('<div class="right">');
+			rightDiv.appendTo(wrapper);
+
+		rightDiv.append('<div class="hello">Hola!</div>');
+		rightDiv.append('<p>My name is <span>Tomek Nowak</span> and I am <span>UI/UX designer</span> from Poland. I create high converting websites.</p>');
+
+		var leftDiv = $('<div class="left">');
+			leftDiv.appendTo(wrapper);
+
+		leftDiv.append('<img src="../assets/images/64.png" style = "margin-top: 0"/>');
 
 	};
 
