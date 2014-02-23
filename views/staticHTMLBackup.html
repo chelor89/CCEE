@@ -1,0 +1,207 @@
+
+OLD STATIC HTML
+
+INDEX
+
+
+    <div id="mainDiv">
+
+      <img id="imgFondo">
+      
+      <div id="modalDiv" class="modal-content">
+
+        <br>
+
+        <div class="bs-example bs-example-tabs">
+            <ul id="myTab" class="nav nav-tabs">
+              <li class="active"><a href="#signin" data-toggle="tab">Ingresar</a></li>
+              <li class=""><a href="#signup" data-toggle="tab">Registrarse</a></li>
+            </ul>
+        </div>
+
+        <div class="modal-body">
+
+          <div id="myTabContent" class="tab-content">
+
+            <div id="signin" class="tab-pane fade active in">
+
+              <div class="control-group">
+                <label class="control-label" for="userid">Cedula:</label>
+
+                <div class="controls">
+                  <input required="" id="userid" name="userid" type="text" class="form-control" placeholder="12345678" class="input-medium" required="">
+                </div>
+              </div>
+
+              <div class="control-group">
+                <label class="control-label" for="passwordinput">Password:</label>
+                <div class="controls">
+                  <input required="" id="passwordinput" name="passwordinput" class="form-control" type="password" placeholder="********" class="input-medium">
+                </div>
+              </div>
+
+              <div class="control-group">
+                <label class="control-label" for="signin"></label>
+                <div class="controls">
+
+                  <center>
+                    <button id="signin" name="signin" class="btn btn-warning">Ingresar</button>
+                  </center>
+                </div>
+              </div>
+
+            </div>
+
+            <div id="signup" class="tab-pane fade">
+
+              <div class="control-group">
+                <label class="control-label" for="userid">Cedula:</label>
+                <div class="controls">
+                  <input id="userid" name="userid" class="form-control" type="text" placeholder="12345678" class="input-large" required="">
+                </div>
+              </div>
+
+
+              <div class="control-group">
+                <label class="control-label" for="Email">Mail:</label>
+                <div class="controls">
+                  <input id="Email" name="Email" class="form-control" type="text" placeholder="mail@mail.com" class="input-large" required="">
+                </div>
+              </div>
+            
+  
+              <div class="control-group">
+                <label class="control-label" for="confirmsignup"></label>
+                <div class="controls">
+                  <center>
+                    <button id="confirmsignup" name="confirmsignup" class="btn btn-warning">Registrarse</button>
+                  </center>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+MAIN
+
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <script src="../jquery/jquery-2.1.0.js"></script>
+
+    <script src="../bootstrap/js/bootstrap.js"></script>  
+    <script src="../js/main.js"></script>  
+
+  	<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+  	<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+
+  	<link rel="stylesheet" href="../bootstrap/css/bootstrap-theme.css">
+  	<link rel="stylesheet" href="../bootstrap/css/bootstrap-theme.min.css">
+
+  </head>
+
+  <body>
+
+    <div id="indexDiv">
+
+      <nav class="navbar navbar-default" role="navigation">
+
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"></button>
+            <a class="navbar-brand" href="#">Cada vez falta menos !</a>
+          </div>
+
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+            <ul class="nav navbar-nav navbar-right">
+
+              <li><a href="#">Mis numeros</a></li>
+
+             <!-- <li> / </li> -->
+
+              <li class="dropdown">
+
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Reservas </a>
+
+                <ul class="dropdown-menu">
+                  <li><a href="#" >Registrar reserva</a></li>
+                  <li><a href="#" >Cancelar reserva</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#" >Consultas</a></li>
+                </ul>
+
+              </li>
+
+              <!-- <li> / </li> -->
+
+              <li class="dropdown">
+
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ventas </a>
+
+                <ul class="dropdown-menu">
+                  <li><a href="#" >Registrar venta</a></li>
+                  <li><a href="#" >Cancelar venta</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#" >Consultas</a></li>
+                </ul>
+
+              </li>
+
+              <!-- <li> / </li> -->
+
+              <li><a href="#">Estadisticas</a></li>
+
+              <!-- <li> / </li> -->
+
+              <li><a href="#">Notificaciones</a></li>
+
+              <!-- <li> / </li> -->
+
+              <li class="dropdown">
+
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Agustin </a>
+
+                <ul class="dropdown-menu">
+                  <li><a href="#">Mis datos</a></li>
+                  <li><a href="#">Mi Grupo de Viaje (?)</a></li>
+                  <li class="divider"></li>
+                  <li><a id= "signOut" href="#">Cerrar Sesion</a></li>
+                </ul>
+
+              </li>
+
+            </ul>
+
+          </div><!-- /.navbar-collapse -->
+
+        </div><!-- /.container-fluid -->
+
+      </nav>
+
+    </div>
+
+  </body>
+
+</html>
