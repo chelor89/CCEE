@@ -13,7 +13,7 @@ mainScreen = function(welcomeScreen){
 
 		var nav = $('<nav></nav>');
 		nav.appendTo(header);
-		
+
 		var mainUl = $('<ul></ul>');
 			mainUl.appendTo(nav);
 
@@ -29,7 +29,7 @@ mainScreen = function(welcomeScreen){
 		mainUl.append('<li class="separator">/</li>');
 		mainUl.append('<li><a href="#" id="notifications_nav">NOTIFICACIONES</a></li>');
 		mainUl.append('<li class="separator">/</li>');
-		mainUl.append('<li><a href="#" id="salir_nav">SALIR</a></li>');
+		mainUl.append('<li><a href="#" id="signOut" onclick="itemClicked()">SALIR</a></li>');
 
 		nav.append('<a href="#" class="hire_me">Agustin</a>');
 
