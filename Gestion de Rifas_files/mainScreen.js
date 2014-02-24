@@ -11,9 +11,14 @@ mainScreen = function(welcomeScreen){
 		var header = $('<header></header>')
 			header.appendTo(mainDiv);
 
+		var divNav = $('<div class="inner_header">');
+			divNav.appendTo(header);
+
+		divNav.append('<h1><div class="logo" onclick="itemClicked();"></div></h1>');
+
 		var nav = $('<nav></nav>');
-		nav.appendTo(header);
-		
+		divNav.append(nav);
+
 		var mainUl = $('<ul></ul>');
 			mainUl.appendTo(nav);
 
@@ -32,7 +37,7 @@ mainScreen = function(welcomeScreen){
 		mainUl.append('<li><a href="#" id="salir_nav">SALIR</a></li>');
 
 		nav.append('<a href="#" class="hire_me">Agustin</a>');
-
+		
 		var containerDiv = $('<div id="container">');
 			containerDiv.appendTo(mainDiv);
 
@@ -46,8 +51,7 @@ mainScreen = function(welcomeScreen){
 			rightDiv.appendTo(wrapper);
 
 		rightDiv.append('<div class="hello">Hola!</div>');
-		rightDiv.append('<br>');
-		rightDiv.append('<p>Deja de vender rifas y ponete a laburar.</p>');
+		rightDiv.append('<p>My name is <span>Tomek Nowak</span> and I am <span>UI/UX designer</span> from Poland. I create high converting websites.</p>');
 
 		var leftDiv = $('<div class="left">');
 			leftDiv.appendTo(wrapper);

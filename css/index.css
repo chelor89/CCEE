@@ -69,7 +69,7 @@ header nav ul li {
 }
 
 header nav ul li a {
-  font-family: "proxima_nova_rgbold";
+  font-family: 'Varela Round', sans-serif;
   color: #19191a;
   text-decoration: none;
   padding: 0 17px; 
@@ -77,11 +77,12 @@ header nav ul li a {
 
 header nav ul li a.selected, header nav ul li a:hover {
   color: #ce1d33; 
+  text-decoration: none;
 }
 
 header nav .hire_me {
-  font-size: 16px;
-  font-family: "proxima_nova_rgbold";
+  font-size: 18px;
+  font-family: 'Varela Round', sans-serif;
   background-color: #ce1d33;
   float: right;
   color: #FFF;
@@ -91,7 +92,9 @@ header nav .hire_me {
   background-clip: padding-box;
   cursor: pointer;
   border: 3px solid #ce1d33;
-  margin-left: 24px;
+  margin-left: 120px;
+  margin-right: 20px;
+  margin-top: -5px;
   -o-transition: .3s;
   -ms-transition: .3s;
   -moz-transition: .3s;
@@ -117,7 +120,6 @@ header nav .hire_me:hover {
 
 #section {
   width: 100%;
-  background: url("../images/start_background.gif");
   height: 600px;
   border-bottom: 1px solid #e9e9e9; 
 }
@@ -127,8 +129,8 @@ header nav .hire_me:hover {
   width: 660px; 
 }
 
-#section .left img {
-  margin-top: 71px; 
+#section .left {
+  margin-top: 0px; 
 }
 
 #section .right {
@@ -140,15 +142,21 @@ header nav .hire_me:hover {
 
 #section .right .hello {
   font-size: 60px;
-  font-family: "proxima_nova_rgbold";
+  font-family: 'Varela Round', sans-serif;
   color: #1a1a1a; 
 }
 
-#section .right p {
+#imgHome{
+  width: 600px;
+  height: 600px;
+  margin-top: 0px;
+}
+
+#section .right {
   width: 380px;
   margin-top: 25px;
   font-size: 28px;
-  font-family: "museo_slab500";
+  font-family: 'Varela Round', sans-serif;
   line-height: 50px;
   color: #333333; 
 }
