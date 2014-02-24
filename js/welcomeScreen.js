@@ -1,6 +1,6 @@
 function welcomeScreen() {
 
-	this.image = "pepe";
+	this.image = "../assets/images/SS-Australia-011.jpg";
 	this.mainScreen = null;
 
 	this.render = function(){
@@ -11,7 +11,7 @@ function welcomeScreen() {
 		mainDiv.append($('<img id="imgFondo">'));
 			$('#imgFondo').width($(window).width());
 			$('#imgFondo').height($(window).height());
-			$('#imgFondo').attr("src", "../assets/images/SS-Australia-011.jpg");		
+			$('#imgFondo').attr("src", this.image);		
 		
 		var modalDiv = $('<div id="modalDiv" class="modal-content">');
 			modalDiv.appendTo(mainDiv);
@@ -22,8 +22,8 @@ function welcomeScreen() {
 			div.appendTo(modalDiv);
 
 		var ul = $('<ul id="myTab" class="nav nav-tabs">');
-			ul.append($('<li class="active"><a href="#signin" data-toggle="tab">Ingresar</a></li>'));
-			ul.append($('<li class=""><a href="#signup" data-toggle="tab">Registrarse</a></li>'));
+			ul.append($('<li class="welcomeText active"><a href="#signin" data-toggle="tab">Ingresar</a></li>'));
+			ul.append($('<li class="welcomeText"><a href="#signup" data-toggle="tab">Registrarse</a></li>'));
 
 		div.append(ul);
 
@@ -39,31 +39,31 @@ function welcomeScreen() {
 
 		div = $('<div class="control-group">');
 		div.appendTo(divSignIn);
-		div.append($('<label class="control-label" for="userid">Cedula:</label>'));
+		div.append($('<label class="welcomeText control-label" for="userid">Cedula:</label>'));
 
 		var divClassControl = $('<div class="controls">');
 			divClassControl.appendTo(div);
-			divClassControl.append($('<input required="" id="userid" name="userid" type="text" class="form-control" placeholder="12345678" class="input-medium" required="">'));
+			divClassControl.append($('<input required="" id="userid" name="userid" type="text" class="welcomeText form-control" placeholder="12345678" class="input-medium" required="">'));
 
 		divSignIn.append('<br>');
 
 		div = $('<div class="control-group">');
 		div.appendTo(divSignIn);
-		div.append($('<label class="control-label" for="passwordinput">Password:</label>'));
+		div.append($('<label class="welcomeText control-label" for="passwordinput">Password:</label>'));
 
 		divClassControl = $('<div class="controls">');
 		divClassControl.appendTo(div);
-		divClassControl.append($('<input required="" id="passwordinput" name="passwordinput" class="form-control" type="password" placeholder="********" class="input-medium">'));
+		divClassControl.append($('<input required="" id="passwordinput" name="passwordinput" class="welcomeText form-control" type="password" placeholder="********" class="input-medium">'));
 
 		div = $('<div class="control-group">');
 		div.appendTo(divSignIn);
-		div.append($('<label class="control-label" for="signin"></label>'));
+		div.append($('<label class="welcomeText control-label" for="signin"></label>'));
 
 		divClassControl = $('<div class="controls">');
 		divClassControl.appendTo(div);
 		var center = $('<center>');
 		center.appendTo(divClassControl);
-		center.append($('<button id="signin" name="signin" class="btn btn-warning">Ingresar</button>'));
+		center.append($('<button id="signin" name="signin" class="welcomeText buttonWelcomePage">Ingresar</button>'));
 
 		var divSignUp = $('<div id="signup" class="tab-pane fade">');
 			divSignUp.appendTo(divMyTabContent);
@@ -74,39 +74,37 @@ function welcomeScreen() {
 
 		divClassControl = $('<div class="controls">');
 		divClassControl.appendTo(div);
-		divClassControl.append($('<input id="userid" name="userid" class="form-control" type="text" placeholder="12345678" class="input-large" required="">'));
+		divClassControl.append($('<input id="userid" name="userid" class="welcomeText form-control" type="text" placeholder="12345678" class="input-large" required="">'));
 
 		divSignUp.append('<br>');
 
 		div = $('<div class="control-group">');
 		div.appendTo(divSignUp);
-		div.append($('<label class="control-label" for="Email">Mail:</label>'));
+		div.append($('<label class="welcomeText control-label" for="Email">Mail:</label>'));
 
 		divClassControl = $('<div class="controls">');
 		divClassControl.appendTo(div);
-		divClassControl.append($('<input id="Email" name="Email" class="form-control" type="text" placeholder="mail@mail.com" class="input-large" required="">'));
+		divClassControl.append($('<input id="Email" name="Email" class="welcomeText form-control" type="text" placeholder="mail@mail.com" class="input-large" required="">'));
 		
 		divSignUp.append('<br>');
 
 		div = $('<div class="control-group">');
 		div.appendTo(divSignUp);
-		div.append($('<label class="control-label" for="password">Password:</label>'));
+		div.append($('<label class="welcomeText control-label" for="password">Password:</label>'));
 
 		divClassControl = $('<div class="controls">');
 		divClassControl.appendTo(div);
-		divClassControl.append($('<input id="password" name="Password" class="form-control" type="text" placeholder="********" class="input-large" required="">'));
-
-		divSignUp.append('<br>');
+		divClassControl.append($('<input id="password" name="Password" class="welcomeText form-control" type="text" placeholder="********" class="input-large" required="">'));
 
 		div = $('<div class="control-group">');
 		div.appendTo(divSignUp);
-		div.append($('<label class="control-label" for="confirmsignup"></label>'));
+		div.append($('<label class="welcomeText control-label" for="confirmsignup"></label>'));
 
 		divClassControl = $('<div class="controls">');
 		divClassControl.appendTo(div);
 		center = $('<center>');
 		center.appendTo(divClassControl);
-		center.append($('<button id="confirmsignup" name="confirmsignup" class="btn btn-warning">Registrarse</button>'));
+		center.append($('<button id="confirmsignup" name="confirmsignup" class="welcomeText buttonWelcomePage">Registrarse</button>'));
 
 		$("#mainDiv").fadeIn('slow',function(){
 			setTimeout(function(){

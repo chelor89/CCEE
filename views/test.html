@@ -12,49 +12,90 @@
 		<![endif]-->
 	</head>
 	<body>
-		<header>
-			<div class="inner_header">
-				<h1>
-					<div class="logo" onclick="scroll_to_top();"><span>Sternhaufen</span></div>
-				</h1>
-				<nav>
-					<ul>
-						<li><a href="#" class="selected" id="start_nav">Inicio</a></li>
-						<li class="separator">/</li>
-						<li><a href="#services" id="services_nav">Mis numeros</a></li>
-						<li class="separator">/</li>
-						<li><a href="#work" id="work_nav">Reservas</a></li>
-						<li class="separator">/</li>
-						<li><a href="#clients" id="clients_nav">Ventas</a></li>
-						<li class="separator">/</li>
-						<li><a href="#book" id="book_nav">Estadisticas</a></li>
-						<li class="separator">/</li>
-						<li><a href="#contact" id="contact_nav">Notificaciones</a></li>
-					</ul>
-					
-					<a href="mailto:tomek@colourfreak.com" target="_blank" class="hire_me">Agustin</a>
-				</nav>
-			</div>
-		</header>
 
-		<div id="main">
-			<section id="start">
-				<div class="wrapper">
-					
-					<div class="right">
-						<div class="hello">Hola!</div>
-						<p>
-							My name is <span>Tomek Nowak</span> and I am <span>UI/UX designer</span> from Poland. I create high converting websites. 
-						</p>
-					</div>
-					
-					<div class="left">
-						<img src="../assets/images/illustration.png"/>
-					</div>
-		
-					<br class="cleaner"/>
-				</div>
-			</section>
-		</div>
+    <div id="mainDiv">
+
+      <img id="imgFondo">
+      
+      <div id="modalDiv" class="modal-content">
+
+        <br>
+
+        <div class="bs-example bs-example-tabs">
+            <ul id="myTab" class="nav nav-tabs">
+              <li class="active"><a href="#signin" data-toggle="tab">Ingresar</a></li>
+              <li class=""><a href="#signup" data-toggle="tab">Registrarse</a></li>
+            </ul>
+        </div>
+
+        <div class="modal-body">
+
+          <div id="myTabContent" class="tab-content">
+
+            <div id="signin" class="tab-pane fade active in">
+
+              <div class="control-group">
+                <label class="control-label" for="userid">Cedula:</label>
+
+                <div class="controls">
+                  <input required="" id="userid" name="userid" type="text" class="form-control" placeholder="12345678" class="input-medium" required="">
+                </div>
+              </div>
+
+              <div class="control-group">
+                <label class="control-label" for="passwordinput">Password:</label>
+                <div class="controls">
+                  <input required="" id="passwordinput" name="passwordinput" class="form-control" type="password" placeholder="********" class="input-medium">
+                </div>
+              </div>
+
+              <div class="control-group">
+                <label class="control-label" for="signin"></label>
+                <div class="controls">
+
+                  <center>
+                    <button id="signin" name="signin" class="btn btn-warning">Ingresar</button>
+                  </center>
+                </div>
+              </div>
+
+            </div>
+
+            <div id="signup" class="tab-pane fade">
+
+              <div class="control-group">
+                <label class="control-label" for="userid">Cedula:</label>
+                <div class="controls">
+                  <input id="userid" name="userid" class="form-control" type="text" placeholder="12345678" class="input-large" required="">
+                </div>
+              </div>
+
+
+              <div class="control-group">
+                <label class="control-label" for="Email">Mail:</label>
+                <div class="controls">
+                  <input id="Email" name="Email" class="form-control" type="text" placeholder="mail@mail.com" class="input-large" required="">
+                </div>
+              </div>
+            
+  
+              <div class="control-group">
+                <label class="control-label" for="confirmsignup"></label>
+                <div class="controls">
+                  <center>
+                    <button id="confirmsignup" name="confirmsignup" class="btn btn-warning">Registrarse</button>
+                  </center>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
 	</body>
 </html>
