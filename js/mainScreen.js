@@ -56,6 +56,7 @@ mainScreen = function(){
 		optionsDiv = $('<div id="optionsDiv" class="smallDiv">');
 		optionsDiv.appendTo(wrapper);
 		optionsDiv.css('float','right');
+		optionsDiv.css('margin-right','50px');
 
 		optionsDiv.append('<div class="hello">Hola!</div>');
 		optionsDiv.append('<br>');
