@@ -1,8 +1,8 @@
 
 $(document).ready(function() {
 
-    welcomeScreen = new welcomeScreen();
-	welcomeScreen.render();
+    var screenWelcome = new welcomeScreen();
+	screenWelcome.render();
 
 });
 

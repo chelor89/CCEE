@@ -1,11 +1,10 @@
 function welcomeScreen() {
 
 	this.image = "../assets/images/SS-Australia-011.jpg";
-	this.mainScreen = null;
 
 	this.render = function(){
 
-		var mainDiv = $('<div id="mainDiv">');
+		mainDiv = $('<div id="mainDiv">');
 		mainDiv.appendTo(document.body);
 
 		mainDiv.append($('<img id="imgFondo">'));
@@ -13,37 +12,37 @@ function welcomeScreen() {
 			$('#imgFondo').height($(window).height());
 			$('#imgFondo').attr("src", this.image);		
 		
-		var modalDiv = $('<div id="modalDiv" class="modal-content">');
-			modalDiv.appendTo(mainDiv);
+		modalDiv = $('<div id="modalDiv" class="modal-content">');
+		modalDiv.appendTo(mainDiv);
 
 		modalDiv.append('<br>');
 
-		var div = $('<div class="bs-example bs-example-tabs">');
-			div.appendTo(modalDiv);
+		div = $('<div class="bs-example bs-example-tabs">');
+		div.appendTo(modalDiv);
 
-		var ul = $('<ul id="myTab" class="nav nav-tabs">');
-			ul.append($('<li class="welcomeText active"><a href="#signin" data-toggle="tab">Ingresar</a></li>'));
-			ul.append($('<li class="welcomeText"><a href="#signup" data-toggle="tab">Registrarse</a></li>'));
+		ul = $('<ul id="myTab" class="nav nav-tabs">');
+		ul.append($('<li class="welcomeText active"><a href="#signin" data-toggle="tab">Ingresar</a></li>'));
+		ul.append($('<li class="welcomeText"><a href="#signup" data-toggle="tab">Registrarse</a></li>'));
 
 		div.append(ul);
 
 		div = $('<div class="modal-body">');
 		div.appendTo(modalDiv);
 
-		var divMyTabContent =  $('<div id="myTabContent" class="tab-content">');
+		divMyTabContent =  $('<div id="myTabContent" class="tab-content">');
 
 		div.append(divMyTabContent);
 
-		var divSignIn = $('<div id="signin" class="tab-pane fade active in">');
-			divSignIn.appendTo(divMyTabContent);
+		divSignIn = $('<div id="signin" class="tab-pane fade active in">');
+		divSignIn.appendTo(divMyTabContent);
 
 		div = $('<div class="control-group">');
 		div.appendTo(divSignIn);
 		div.append($('<label class="welcomeText control-label" for="userid">Cedula:</label>'));
 
-		var divClassControl = $('<div class="controls">');
-			divClassControl.appendTo(div);
-			divClassControl.append($('<input required="" id="userid" name="userid" type="text" class="welcomeText form-control" placeholder="12345678" class="input-medium" required="">'));
+		divClassControl = $('<div class="controls">');
+		divClassControl.appendTo(div);
+		divClassControl.append($('<input required="" id="userid" name="userid" type="text" class="welcomeText form-control" placeholder="12345678" class="input-medium" required="">'));
 
 		divSignIn.append('<br>');
 
@@ -61,12 +60,13 @@ function welcomeScreen() {
 
 		divClassControl = $('<div class="controls">');
 		divClassControl.appendTo(div);
-		var center = $('<center>');
-		center.appendTo(divClassControl);
-		center.append($('<button id="signin" name="signin" class="welcomeText buttonWelcomePage">Ingresar</button>'));
 
-		var divSignUp = $('<div id="signup" class="tab-pane fade">');
-			divSignUp.appendTo(divMyTabContent);
+		center = $('<center>');
+		center.appendTo(divClassControl);
+		center.append($('<button id="signinPressed" name="signin" class="welcomeText buttonWelcomePage">Ingresar</button>'));
+
+		divSignUp = $('<div id="signup" class="tab-pane fade">');
+		divSignUp.appendTo(divMyTabContent);
 
 		div = $('<div class="control-group">');
 		div.appendTo(divSignUp);
@@ -106,26 +106,30 @@ function welcomeScreen() {
 		center.appendTo(divClassControl);
 		center.append($('<button id="confirmsignup" name="confirmsignup" class="welcomeText buttonWelcomePage">Registrarse</button>'));
 
-		$("#mainDiv").fadeIn('slow',function(){
-			setTimeout(function(){
-				$("#modalDiv").fadeIn(600);
-			},400);
-		});
+		this.actions();
+
+	}
+
+	this.actions = function(){
 
 		var self = this;
+		
+		$("#mainDiv").fadeIn('slow',function(){
+					setTimeout(function(){
+						$("#modalDiv").fadeIn(600);
+					},400);
+		});
 
-		$("#signin").click(function(){
+		$("#signinPressed").click(function(){
 		   	$("#modalDiv").fadeOut(600);
 			setTimeout(function(){
 			   $('#mainDiv').fadeOut( function(){
 			   		$('#mainDiv').remove();
-			   		if (!self.mainScreen)
-			   			self.mainScreen = new mainScreen();
-			   		self.mainScreen.render();
+			   			var screenMain = new mainScreen();
+			   			screenMain.render();
 				});
 			},500);
 		});
-
 	}
 
 }

@@ -74,6 +74,25 @@ header nav ul li {
   color: #cacacc; 
 }
 
+.buttonHeader{
+  font-family: 'Varela Round', sans-serif;
+  color: #19191a;
+  text-decoration: none;
+  padding: 0 17px; 
+  background: none;
+  border: none;
+}
+
+.buttonHeader:hover, .buttonHeader.selected{
+  color: #ce1d33; 
+  text-decoration: none;
+  border: none;
+}
+
+.buttonHeader:focus{
+  outline: none;
+}
+
 header nav ul li a {
   font-family: 'Varela Round', sans-serif;
   color: #19191a;
@@ -86,7 +105,7 @@ header nav ul li a.selected, header nav ul li a:hover {
   text-decoration: none;
 }
 
-header nav .proButton {
+.proButton {
   font-size: 18px;
   font-family: 'Varela Round', sans-serif;
   background-color: #ce1d33;
@@ -109,7 +128,7 @@ header nav .proButton {
   text-decoration: none;
 }
 
-header nav .proButton:hover {
+.proButton:hover {
   background-color: #FFF;
   color: #ce1d33; 
 }
@@ -136,6 +155,31 @@ header nav .proButton:hover {
   color: #ce1d33; 
 }
 
+.optionButton{
+  font-size: 28px;
+  width: 200px;
+  padding-right: 250px;
+  font-family: 'Varela Round', sans-serif;
+  background-color: #ce1d33;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  background-clip: padding-box;
+  cursor: pointer;
+  color: #FFF;
+  border: 3px solid #ce1d33;
+  -o-transition: .3s;
+  -ms-transition: .3s;
+  -moz-transition: .3s;
+  -webkit-transition: .3s;
+  text-decoration: none;
+}
+
+.optionButton:hover {
+  background-color: #FFF;
+  color: #ce1d33; 
+  text-decoration: none;
+}
+
 .wrapper {
   width: 1180px;
   padding: 0 10px;
@@ -152,43 +196,40 @@ header nav .proButton:hover {
   border-bottom: 1px solid #e9e9e9; 
 }
 
-#section .left {
-  float: left;
-  width: 660px; 
-  margin-top: 0px; 
+#section .bigDiv {
+  width: auto; 
+  height: auto;
+  margin-top: 0px;
+  z-index: 0;    
   display: none;
 }
 
-#section .right {
-  float: right;
-  width: 480px;
+#section .smallDiv {
   padding-left: 40px;
-  padding-top: 120px; 
-}
-
-#section .right .hello {
-  font-size: 60px;
-  font-family: 'Varela Round', sans-serif;
-  color: #1a1a1a; 
-}
-
-#imgHome{
-  width: 600px;
-  height: 600px;
-  margin-top: 0px;
-}
-
-#section .right {
+  padding-top: 120px;
   width: 380px;
   margin-top: 25px;
   font-size: 28px;
   font-family: 'Varela Round', sans-serif;
   line-height: 50px;
   color: #333333; 
-  display: none;
+  z-index: 1;
+  display: none;  
 }
 
-#section .right p span {
+#section .smallDiv .hello {
+  font-size: 60px;
+  font-family: 'Varela Round', sans-serif;
+  color: #1a1a1a; 
+}
+
+#imgHome{
+  width: auto;
+  height: 600px;
+  margin-top: 0px;
+}
+
+#section .smallDiv p span {
   color: #808080; 
 }
 
