@@ -105,7 +105,7 @@ header nav ul li a.selected, header nav ul li a:hover {
   text-decoration: none;
 }
 
-.proButton {
+#proButton {
   font-size: 18px;
   font-family: 'Varela Round', sans-serif;
   background-color: #ce1d33;
@@ -128,7 +128,7 @@ header nav ul li a.selected, header nav ul li a:hover {
   text-decoration: none;
 }
 
-.proButton:hover {
+#proButton:hover {
   background-color: #FFF;
   color: #ce1d33; 
 }

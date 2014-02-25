@@ -114,10 +114,12 @@ function welcomeScreen() {
 
 		var self = this;
 		
-		$("#mainDiv").fadeIn('slow',function(){
-					setTimeout(function(){
-						$("#modalDiv").fadeIn(600);
-					},400);
+		$('#imgFondo').load(function(){
+			$("#mainDiv").fadeIn('slow',function(){
+				setTimeout(function(){
+					$("#modalDiv").fadeIn(600);
+				},400);
+			});
 		});
 
 		$("#signinPressed").click(function(){

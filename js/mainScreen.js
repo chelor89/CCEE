@@ -33,7 +33,7 @@ mainScreen = function(){
 		mainUl.append('<li class="separator">/</li>');
 		mainUl.append('<li><button class="buttonHeader" id="8">SALIR</button></li>');
 
-		nav.append('<a href="#" class="proButton">Agustin</a>');
+		nav.append('<a href="#" id="proButton">Agustin</a>');
 
 		containerDiv = $('<div id="container">');
 		$('#mainDivMainPage').append(containerDiv);
@@ -74,7 +74,9 @@ mainScreen = function(){
 
 		imageDiv.fadeIn('slow',function(){
 			$('#header').fadeIn('slow',function(){
-				optionsDiv.fadeIn('slow');
+				//$('#proButton').fadeIn('slow',function(){
+					optionsDiv.fadeIn('slow');
+				//});
 			});		
 		});
 
