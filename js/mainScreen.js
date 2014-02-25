@@ -5,6 +5,7 @@ mainScreen = function(){
 	this.render = function(){
 
 		mainDiv = $('<div id="mainDivMainPage">');
+		mainDiv.height($(window).height());
 		mainDiv.appendTo(document.body);
 
 		header = $('<header id="header">')
@@ -38,6 +39,7 @@ mainScreen = function(){
 		$('#mainDivMainPage').append(containerDiv);
 
 		section = $('<section id="section">');
+		section.height($(window).height()-header.height());
 		section.appendTo(containerDiv);
 
 		wrapper = $('<div class="wrapper">');
@@ -154,6 +156,7 @@ mainScreen = function(){
 		imageDiv.appendTo(wrapper);
 		imageDiv.css('float','right');
 		imageDiv.css('margin-right','100px');
+		imageDiv.css('margin-top','25px');
 
 		img = $('<img id="imgHome">');
 		img.appendTo(imageDiv);

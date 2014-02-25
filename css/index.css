@@ -191,9 +191,9 @@ header nav ul li a.selected, header nav ul li a:hover {
   top: 91px; }
 
 #section {
-  width: 100%;
-  height: 600px;
+  width: 100%;s
   border-bottom: 1px solid #e9e9e9; 
+  background-image: url('../assets/images/background.gif');
 }
 
 #section .bigDiv {
