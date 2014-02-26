@@ -15,8 +15,6 @@ function welcomeScreen() {
 		modalDiv = $('<div id="modalDiv" class="modal-content">');
 		modalDiv.appendTo(mainDiv);
 
-		modalDiv.append('<br>');
-
 		div = $('<div class="bs-example bs-example-tabs">');
 		div.appendTo(modalDiv);
 
@@ -38,43 +36,44 @@ function welcomeScreen() {
 
 		div = $('<div class="control-group">');
 		div.appendTo(divSignIn);
-		div.append($('<label class="welcomeText control-label" for="userid">Cedula:</label>'));
+		div.append($('<label class="welcomeText control-label">Cedula:</label>'));
 
 		divClassControl = $('<div class="controls">');
 		divClassControl.appendTo(div);
-		divClassControl.append($('<input required="" id="userid" name="userid" type="text" class="welcomeText form-control" placeholder="12345678" class="input-medium" required="">'));
+		divClassControl.append($('<input id="userLogIn" type="text" class="welcomeText form-control" placeholder="12345678" class="input-medium">'));
 
 		divSignIn.append('<br>');
 
 		div = $('<div class="control-group">');
 		div.appendTo(divSignIn);
-		div.append($('<label class="welcomeText control-label" for="passwordinput">Password:</label>'));
+		div.append($('<label class="welcomeText control-label">Password:</label>'));
 
 		divClassControl = $('<div class="controls">');
 		divClassControl.appendTo(div);
-		divClassControl.append($('<input required="" id="passwordinput" name="passwordinput" class="welcomeText form-control" type="password" placeholder="********" class="input-medium">'));
+		divClassControl.append($('<input required="" id="passwordSignIn" class="welcomeText form-control" type="password" placeholder="********" class="input-medium">'));
+
+		divSignIn.append('<br>');
 
 		div = $('<div class="control-group">');
 		div.appendTo(divSignIn);
-		div.append($('<label class="welcomeText control-label" for="signin"></label>'));
 
 		divClassControl = $('<div class="controls">');
 		divClassControl.appendTo(div);
 
 		center = $('<center>');
 		center.appendTo(divClassControl);
-		center.append($('<button id="signinPressed" name="signin" class="welcomeText buttonWelcomePage">Ingresar</button>'));
+		center.append($('<button id="confirmsignin" class="welcomeText buttonWelcomePage">Ingresar</button>'));
 
 		divSignUp = $('<div id="signup" class="tab-pane fade">');
 		divSignUp.appendTo(divMyTabContent);
 
 		div = $('<div class="control-group">');
 		div.appendTo(divSignUp);
-		div.append($('<label class="control-label" for="userid">Cedula:</label>'));
+		div.append($('<label class="welcomeText control-label">Cedula:</label>'));
 
 		divClassControl = $('<div class="controls">');
 		divClassControl.appendTo(div);
-		divClassControl.append($('<input id="userid" name="userid" class="welcomeText form-control" type="text" placeholder="12345678" class="input-large" required="">'));
+		divClassControl.append($('<input id="userSignUp" class="welcomeText form-control" type="text" placeholder="12345678" class="input-medium">'));
 
 		divSignUp.append('<br>');
 
@@ -84,36 +83,38 @@ function welcomeScreen() {
 
 		divClassControl = $('<div class="controls">');
 		divClassControl.appendTo(div);
-		divClassControl.append($('<input id="Email" name="Email" class="welcomeText form-control" type="text" placeholder="mail@mail.com" class="input-large" required="">'));
+		divClassControl.append($('<input id="email" class="welcomeText form-control" type="text" placeholder="mail@mail.com" class="input-large">'));
 		
 		divSignUp.append('<br>');
 
 		div = $('<div class="control-group">');
 		div.appendTo(divSignUp);
-		div.append($('<label class="welcomeText control-label" for="password">Password:</label>'));
+		div.append($('<label class="welcomeText control-label">Password:</label>'));
 
 		divClassControl = $('<div class="controls">');
 		divClassControl.appendTo(div);
-		divClassControl.append($('<input id="password" name="Password" class="welcomeText form-control" type="text" placeholder="********" class="input-large" required="">'));
+		divClassControl.append($('<input id="passwordSignUp" class="welcomeText form-control" type="password" placeholder="********" class="input-medium">'));
+
+		divSignUp.append('<br>');
 
 		div = $('<div class="control-group">');
 		div.appendTo(divSignUp);
-		div.append($('<label class="welcomeText control-label" for="confirmsignup"></label>'));
 
 		divClassControl = $('<div class="controls">');
 		divClassControl.appendTo(div);
+
 		center = $('<center>');
 		center.appendTo(divClassControl);
-		center.append($('<button id="confirmsignup" name="confirmsignup" class="welcomeText buttonWelcomePage">Registrarse</button>'));
+		center.append($('<button id="confirmsignup" class="welcomeText buttonWelcomePage">Registrarse</button>'));
 
 		this.actions();
 
 	}
 
 	this.actions = function(){
-
-		var self = this;
 		
+		var self = this;
+
 		$('#imgFondo').load(function(){
 			$("#mainDiv").fadeIn('slow',function(){
 				setTimeout(function(){
@@ -122,16 +123,42 @@ function welcomeScreen() {
 			});
 		});
 
-		$("#signinPressed").click(function(){
-		   	$("#modalDiv").fadeOut(600);
-			setTimeout(function(){
-			   $('#mainDiv').fadeOut( function(){
-			   		$('#mainDiv').remove();
-			   			var screenMain = new mainScreen();
-			   			screenMain.render();
-				});
-			},500);
+		$("#confirmsignin").click(function(){
+			if (self.checkFields("logIn")){
+			   	$("#modalDiv").fadeOut(600);
+				setTimeout(function(){
+				   $('#mainDiv').fadeOut( function(){
+				   		$('#mainDiv').remove();
+				   			var screenMain = new mainScreen();
+				   			screenMain.render(false);
+					});
+				},500);
+			}
+			else{
+				alert('WrongFields');
+			}
 		});
+
+		$("#confirmsignup").click(function(){
+			if (self.checkFields("logIn")){
+			   	$("#modalDiv").fadeOut(600);
+				setTimeout(function(){
+				   $('#mainDiv').fadeOut( function(){
+				   		$('#mainDiv').remove();
+				   			var screenMain = new mainScreen();
+				   			screenMain.render(true);
+					});
+				},500);
+			}
+			else{
+				alert('WrongFields');
+			}
+		});
+
+	}
+
+	this.checkFields = function(type){
+		return true;
 	}
 
 }

@@ -1,9 +1,16 @@
 mainScreen = function(){
 
-	this.hasPassword = false;
 
-	this.render = function(){
+	this.numbers = [];
 
+	this.render = function(nuevoUsuario){
+
+
+		for (var i = 0; i < 10; i++){
+			this.numbers.push(i+11111);
+		}
+
+		
 		mainDiv = $('<div id="mainDivMainPage">');
 		mainDiv.height($(window).height());
 		mainDiv.appendTo(document.body);
@@ -33,7 +40,7 @@ mainScreen = function(){
 		mainUl.append('<li class="separator">/</li>');
 		mainUl.append('<li><button class="buttonHeader" id="8">SALIR</button></li>');
 
-		nav.append('<a href="#" id="proButton">Agustin</a>');
+		nav.append('<button id="userButton">Agustin</button>');
 
 		containerDiv = $('<div id="container">');
 		$('#mainDivMainPage').append(containerDiv);
@@ -47,11 +54,11 @@ mainScreen = function(){
 
 		this.actions();
 
-		this.renderHome();
+		this.renderHome(nuevoUsuario);
 
 	};
 
-	this.renderHome = function(){
+	this.renderHome = function(nuevoUsuario){
 
 		wrapper = $('.wrapper');
 
@@ -60,9 +67,16 @@ mainScreen = function(){
 		optionsDiv.css('float','right');
 		optionsDiv.css('margin-right','50px');
 
-		optionsDiv.append('<div class="hello">Hola!</div>');
-		optionsDiv.append('<br>');
-		optionsDiv.append('<p>Deja de vender rifas y ponete a laburar.</p>');
+		if (nuevoUsuario){
+			optionsDiv.append('<div class="hello">Bienvenido!</div>');
+			optionsDiv.append('<br>');
+			optionsDiv.append('<p>Para comenzar registra tus numeros entrando a <i>Mis Numeros</i>.</p>');
+		}
+		else{
+			optionsDiv.append('<div class="hello">Hola!</div>');
+			optionsDiv.append('<br>');
+			optionsDiv.append('<p>Deja de vender rifas y ponete a laburar.</p>');
+		}
 
 		imageDiv = $('<div id="imageDiv" class="bigDiv">');
 		imageDiv.appendTo(wrapper);
@@ -74,7 +88,7 @@ mainScreen = function(){
 
 		imageDiv.fadeIn('slow',function(){
 			$('#header').fadeIn('slow',function(){
-				//$('#proButton').fadeIn('slow',function(){
+				//$('#userButton').fadeIn('slow',function(){
 					optionsDiv.fadeIn('slow');
 				//});
 			});		
@@ -86,18 +100,49 @@ mainScreen = function(){
 
 		wrapper = $('.wrapper');
 
-		optionsDiv = $('<div id="optionsDiv" class="smallDiv">');
+		optionsDiv = $('<div id="optionsDiv">');
 		optionsDiv.appendTo(wrapper);
 		optionsDiv.css('float','left');
-		optionsDiv.css('margin-left','150px');
+		optionsDiv.css('height','540px');
+		
+		buttonVendidos = $('<button class="optionButton" id="nVendidos">');
+
+		buttonLibres = $('<button class="optionButton" id="nLibres">');
+		buttonLibres.text("Libres");
+		buttonLibres.appendTo(optionsDiv);
+
+		buttonVendidos.text("Vendidos");
+		buttonVendidos.appendTo(optionsDiv);
+
+		buttonReservados = $('<button class="optionButton" id="nReservados">');
+		buttonReservados.text("Reservados");
+		buttonReservados.appendTo(optionsDiv);
+
+		listDiv = $('<div id="listDiv">');
+		listDiv.appendTo(optionsDiv);
+		listDiv.css('height','450px');
+		listDiv.css('margin-top','50px');
+		listDiv.css('margin-left','50px');
+
+		ulNumbers = $('<ul id="ulNumbers">');
+		ulNumbers.appendTo(listDiv);
+
+		this.numbers.forEach(function(number){
+			li = $('<li class = "liNumber" id="numero'+number+'">');
+			li.html(number);
+			li.appendTo(ulNumbers);
+		});
+
+		/*optionsDiv.css('margin-left','150px');
 
 		optionsDiv.append('<div class="hello">Mis numeros</div>');
 		optionsDiv.append('<br>');
-		optionsDiv.append('<p>Aca van las opciones.</p>');
+		optionsDiv.append('<p>Aca van las opciones.</p>');*/
 
 		imageDiv = $('<div id="imageDiv" class="bigDiv">');
 		imageDiv.appendTo(wrapper);
 		imageDiv.css('float','right');
+		imageDiv.css('margin-right','-60px');
 
 		img = $('<img id="imgHome">');
 		img.appendTo(imageDiv);
@@ -261,9 +306,57 @@ mainScreen = function(){
 
 	}
 
+	this.renderUser = function(){
+
+		wrapper = $('.wrapper');
+
+		optionsDiv = $('<div id="optionsDiv" class="smallDiv">');
+		optionsDiv.appendTo(wrapper);
+		optionsDiv.css('float','left');
+		optionsDiv.css('margin-left','100px');
+
+		optionsDiv.append('<div class="hello">Mis datos</div>');
+		optionsDiv.append('<br>');
+		optionsDiv.append('<p>Aca van las opciones.</p>');
+
+		imageDiv = $('<div id="imageDiv" class="bigDiv">');
+		imageDiv.appendTo(wrapper);
+		imageDiv.css('float','right');
+
+		img = $('<img id="imgHome">');
+		img.appendTo(imageDiv);
+		img.attr("src", "../assets/images/48.png");	
+
+		imageDiv.fadeIn('slow',function(){
+			$('#header').fadeIn('slow',function(){
+				optionsDiv.fadeIn('slow');
+			});		
+		});
+
+	}
+
 	this.actions = function(){
 
 		var self = this;
+
+		$('#userButton').click(function(event) {
+
+			optionsDiv = $('#optionsDiv');
+			imageDiv = $('#imageDiv');
+			mainDiv = $('#mainDivMainPage');
+
+			$('.selected').removeClass('selected');
+
+			optionsDiv.fadeOut('slow',function(){
+				optionsDiv.remove();
+				imageDiv.fadeOut('slow',function(){
+					imageDiv.remove();
+					self.renderUser();
+				});	
+			});	
+
+		});
+
 
 		$('.buttonHeader').click(function(event) {
 
@@ -287,13 +380,12 @@ mainScreen = function(){
 			});*/
 
 			optionsDiv.fadeOut('slow',function(){
-
 				optionsDiv.remove();
 				imageDiv.fadeOut('slow',function(){
 					imageDiv.remove();
 					switch (parseInt(event.currentTarget.id)){
 						case 1:
-							self.renderHome();
+							self.renderHome(false);
 							break;
 						case 2:
 							self.renderNumbers();
