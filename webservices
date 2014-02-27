@@ -1,0 +1,10 @@
+webservices
+
+	usuario
+
+		registrarse (ci, mail, pass) =>> bool
+		loguearse (id, pass) =>> bool
+		getDataUser (pass) 
+
+	numeros
+

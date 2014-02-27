@@ -126,7 +126,7 @@ header {
     width: 480px;
     padding-left: 40px;
     padding-top: 120px; }
-    #start .right .hello {
+    #start .right .mainText {
       font-size: 60px;
       font-family: "proxima_nova_rgbold";
       color: #1a1a1a; }
@@ -892,7 +892,7 @@ header {
     #start .right {
       width: 100%;
       padding: 0; }
-      #start .right .hello {
+      #start .right .mainText {
         font-size: 50px;
         font-family: "proxima_nova_rgbold";
         color: #1a1a1a;
